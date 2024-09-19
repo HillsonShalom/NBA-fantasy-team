@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headline {
+    padding: 10px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    font-size: large;
+
+}
+
+.team-area {
+    text-align: center;
+}
+
+.team-area > p {
+    font-size: large;
+    color: darkblue;
+    font-weight: bold;
+}
+.flex-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .card {
+    height: 100px;
+    width: 100px;
+
+} */
+.card {
+    border: 1px solid gray;
+    
+}
+
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+}
