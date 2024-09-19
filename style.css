@@ -7,7 +7,7 @@
 
 .headline {
     padding: 10px;
-    background-color: darkblue;
+    background-color: rgb(23, 64, 139);
     color: white;
     text-align: center;
     font-size: large;
@@ -18,29 +18,103 @@
     text-align: center;
 }
 
-.team-area > p {
+.team-area > p, .search-area > p {
     font-size: large;
-    color: darkblue;
+    color: rgb(23, 64, 139);
     font-weight: bold;
+    font-size: x-large;
+    margin: 20px;
+    text-align: center;
 }
 .flex-cards {
     display: flex;
     justify-content: space-around;
 }
 
-/* .card {
-    height: 100px;
-    width: 100px;
-
-} */
+/* כרטיסי השחקנים */
 .card {
-    border: 1px solid gray;
-    
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    box-shadow: 2px 2px 5px gray;
+    padding: 1.5em;
+}
+.card * + * {
+    margin-top: 1em;
+}
+.card *:first-child {
+    color: rgb(23, 64, 139);
+    font-weight: bolder;
 }
 
+.search-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.search-area div {
+    background-color: #eeeeee;
+    width: 50%;
+    margin-left: 25%;
+    padding: 30px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px #eeeeee;
+}
+
+/* הטופס */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    align-items: center;
+}
+select {
+    padding: 0.5em;
+    border-radius: 5px;
+}
+form * + * {
+    margin-top: 5px;
+}
+form input[type="submit"] {
+    width: 40%;
+}
+form input, form select {
+    width: 80%;
+}
+
+table, form {
+    width: 100%;
+}
 
 table {
-    border: 1px solid;
     border-collapse: collapse;
-    width: 100%;
+    text-align: center;
+    
+}
+th {
+    background-color: rgb(213, 76, 76);
+    color: white;
+}
+td, th {
+    border: 1px solid #cccccc;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+button, input[type="submit"] {
+    background-color: rgb(23, 64, 139);
+    color: white;
+    border-radius: 5px;
+    padding: 1em;
+    border: none;
+}
+button {
+    width: 90%;
+}
+
+label {
+    background-color: #333333;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-size: small;
+    color: white;
 }
