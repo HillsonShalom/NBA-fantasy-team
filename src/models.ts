@@ -30,3 +30,12 @@ export class searchClass implements searchModel {
         this.points = points;
     }
 }
+
+export interface team{
+    PG: resultModel | undefined;
+    SG: resultModel | undefined;
+    SF: resultModel | undefined;
+    PF: resultModel | undefined;
+    C: resultModel | undefined;
+}
+

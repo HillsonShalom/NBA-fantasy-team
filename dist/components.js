@@ -1,3 +1,4 @@
+import { sendTeam, updateLocalStorage } from "./service.js";
 // הכרזה על משתנים שיוקצו לכל שחקן כדי למנוע כפלויות
 let PG, SG, SF, PF, C;
 PG = document.createElement('div');
@@ -71,6 +72,32 @@ export function populateTable(table, data) {
                 case 'C':
                     populateCard(C, player);
                     break;
+                default:
+                    return;
+            }
+            updateLocalStorage(player);
+            if (document.querySelectorAll('.card').length === 5) {
+                const send = document.createElement('button');
+                send.textContent = 'Save and Send';
+                send.classList.add('send');
+                document.body.appendChild(send);
+                send.addEventListener('click', () => {
+                    sendTeam().then(r => alert(r));
+                });
+                const clear = document.createElement('button');
+                clear.textContent = 'Clear';
+                clear.classList.add('clear');
+                document.body.appendChild(clear);
+                clear.addEventListener('click', () => {
+                    const cards = document.querySelectorAll('.card');
+                    cards.forEach(c => {
+                        c.innerHTML = '';
+                        c.classList.remove('card');
+                    });
+                    localStorage.clear();
+                    document.body.removeChild(send);
+                    document.body.removeChild(clear);
+                });
             }
         });
     }

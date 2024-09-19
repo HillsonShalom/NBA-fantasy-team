@@ -118,3 +118,27 @@ label {
     font-size: small;
     color: white;
 }
+
+.send, .clear{
+    position: fixed;
+    top: 50px;
+    left: 40px;
+    width: 10%;
+    height: 10%;
+    
+    color: white;
+    padding: 5px;
+    font-size: large;
+    box-shadow: 10px 10px 20px gray;
+}
+.send:hover, .clear:hover {
+    cursor: pointer;
+}
+
+.send{
+    top: 50px;
+    background-color: green;
+}
+.clear {
+    top: 150px;
+}
